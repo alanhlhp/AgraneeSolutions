@@ -2,20 +2,20 @@ import java.util.*;
 
 class Castles{
 	public static void main(String[] args){
-		int[] map = new int[]{2,6,6,6,3};
+		Integer[] map = new Integer[]{2,6,6,6,3};
 
 		Castles c = new Castles();
 
 		System.out.println(c.countCastles(map));
 	}
 
-	public int countCastles(int[] a){
+	public Integer countCastles(Integer[] a){
 		ArrayList<ArrayList<Integer>> peaks = new ArrayList<>();
 		ArrayList<ArrayList<Integer>> valleys = new ArrayList<>();
 		ArrayList<Integer> sub = new ArrayList<>();
-		boolean same = false;
+		Boolean same = false;
 
-		for(int i=1; i<a.length-1; i++){
+		for(Integer i=1; i<a.length-1; i++){
 			//Handle same height points
 			if(same){ 
 				sub.add(a[i]);
