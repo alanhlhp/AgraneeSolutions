@@ -14,11 +14,10 @@ class Castles{
 		ArrayList<ArrayList<Integer>> valleys = new ArrayList<>();
 		ArrayList<Integer> sub = new ArrayList<>();
 		boolean same = false;
-		int ref = 0;
 
 		for(int i=1; i<a.length-1; i++){
-
-			if(same){
+			//Handle same height points
+			if(same){ 
 				sub.add(a[i]);
 				if(a[i]!=a[i+1]){
 					same = false;
@@ -28,7 +27,9 @@ class Castles{
 						valleys.add(sub);
 					}
 				}
-			} else{
+			} 
+			//Identify Peak or Valley
+			else{
 				sub = new ArrayList<>();
 
 				if( (a[i] >= a[i-1]) && (a[i] >= a[i+1]) ){
